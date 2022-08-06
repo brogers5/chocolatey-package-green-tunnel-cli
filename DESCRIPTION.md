@@ -1,25 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>green-tunnel-cli</id>
-    <version>1.8.3</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-green-tunnel-cli/tree/v1.8.3</packageSourceUrl>
-    <owners>sublym0nal</owners>
-    <title>Green Tunnel (CLI)</title>
-    <authors>Sadegh Hayeri</authors>
-    <projectUrl>https://github.com/SadeghHayeri/GreenTunnel</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-green-tunnel-cli@45b1b102bf3a1836a63a043845506e4ca2c774c6/green-tunnel-cli.png</iconUrl>
-    <copyright>Copyright © 2022 Sadegh Hayeri</copyright>
-    <licenseUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v1.8.3/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/SadeghHayeri/GreenTunnel/tree/v1.8.3</projectSourceUrl>
-    <docsUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v1.8.3/README.md</docsUrl>
-    <mailingListUrl>https://github.com/SadeghHayeri/GreenTunnel/discussions</mailingListUrl>
-    <bugTrackerUrl>https://github.com/SadeghHayeri/GreenTunnel/issues</bugTrackerUrl>
-    <tags>green-tunnel-cli green-tunnel green tunnel cli proxy dpi deep-packet-inspection http https sni server-name-indication dns isp filter filtering firewall bypass nodejs npm cross-platform foss</tags>
-    <summary>An anti-censorship utility designed to bypass the DPI system that is put in place by various ISPs to block access to certain websites.</summary>
-    <description><![CDATA[
+
 ---
 ### [choco://green-tunnel-cli](choco://green-tunnel-cli)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://chocolatey.org/packages/choco-protocol-support)
@@ -67,13 +46,3 @@ While Green Tunnel is theoretically embeddable from a licensing perspective, it 
 ---
 
 While the package is being installed, you may see some messages logged to `stderr`, including warnings relating to deprecated package dependencies, or notice messages if `npm` itself is outdated. Note that these are not necessarily indicative of an error condition with the Chocolatey package. Therefore, you should ensure the `failOnStandardError` feature is disabled while installing/upgrading this package.
-]]></description>
-    <dependencies>
-      <dependency id="nodejs" version="8.3.0" />
-      <dependency id="chocolatey-npm.extension" version="1.0.0" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
-</package>
