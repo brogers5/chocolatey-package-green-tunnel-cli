@@ -1,11 +1,7 @@
 
 ---
-### [choco://green-tunnel-cli](choco://green-tunnel-cli)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
 
----
-
-### Looking for the GUI version? Check out the [green-tunnel-gui](https://community.chocolatey.org/packages/green-tunnel-gui) package!
+### Looking for the GUI version? Check out the [green-tunnel-gui](https://community.chocolatey.org/packages/green-tunnel-gui) package
 
 ---
 
@@ -41,7 +37,7 @@ Examples:
 
 ## Package Notes
 
-While Green Tunnel is theoretically embeddable from a licensing perspective, it is deliberately sourced from the npm Registry to ensure dependencies are correctly managed and comply with Community Repository policies that prevent repackaging of relevant modules. If you need to [internalize this package](https://docs.chocolatey.org/en-us/guides/create/recompile-packages), follow [this guide](http://www.leanpro.cn/docs/leanrunner/en/shared/npm_offline) to prepare an archive for offline installation. 
+While Green Tunnel is theoretically embeddable from a licensing perspective, it is deliberately sourced from the npm Registry to ensure dependencies are correctly managed and comply with Community Repository policies that prevent repackaging of relevant modules. If you need to [internalize this package](https://docs.chocolatey.org/en-us/guides/create/recompile-packages), follow [this guide](http://www.leanpro.cn/docs/leanrunner/en/shared/npm_offline) to prepare an archive for offline installation.
 
 ---
 
