@@ -69,7 +69,7 @@ While Green Tunnel is theoretically embeddable from a licensing perspective, it 
 While the package is being installed, you may see some messages logged to `stderr`, including warnings relating to deprecated package dependencies, or notice messages if `npm` itself is outdated. Note that these are not necessarily indicative of an error condition with the Chocolatey package. Therefore, you should ensure the `failOnStandardError` feature is disabled while installing/upgrading this package.
 ]]></description>
     <dependencies>
-      <dependency id="nodejs" version="8.3.0" />
+      <dependency id="nodejs" version="20.10.0" />
       <dependency id="chocolatey-npm.extension" version="1.0.0" />
     </dependencies>
   </metadata>
