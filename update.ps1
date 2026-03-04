@@ -22,10 +22,10 @@ function global:au_BeforeUpdate ($Package) {
 function global:au_SearchReplace {
     @{
         "$($Latest.PackageName).nuspec" = @{
-            '<packageSourceUrl>[^<]*</packageSourceUrl>' = "<packageSourceUrl>https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)</packageSourceUrl>"
-            '<licenseUrl>[^<]*</licenseUrl>'             = "<licenseUrl>https://github.com/$($softwareRepo)/blob/v$($Latest.SoftwareVersion)/LICENSE</licenseUrl>"
-            '<projectSourceUrl>[^<]*</projectSourceUrl>' = "<projectSourceUrl>https://github.com/$($softwareRepo)/tree/v$($Latest.SoftwareVersion)</projectSourceUrl>"
-            '<copyright>[^<]*</copyright>'               = "<copyright>Copyright © $(Get-Date -Format yyyy) Sadegh Hayeri</copyright>"
+            '(<packageSourceUrl>)[^<]*(</packageSourceUrl>)' = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
+            '(<licenseUrl>)[^<]*(</licenseUrl>)'             = "`$1https://github.com/$($softwareRepo)/blob/v$($Latest.SoftwareVersion)/LICENSE`$2"
+            '(<projectSourceUrl>)[^<]*(</projectSourceUrl>)' = "`$1https://github.com/$($softwareRepo)/tree/v$($Latest.SoftwareVersion)`$2"
+            '(<copyright>)[^<]*(</copyright>)'               = "`$1Copyright © $(Get-Date -Format yyyy) Sadegh Hayeri`$2"
         }
         'tools\chocolateyInstall.ps1'   = @{
             "(^[$]?\s*npmPackageVersion\s*=\s*)('.*')" = "`$1'$($Latest.SoftwareVersion)'"
