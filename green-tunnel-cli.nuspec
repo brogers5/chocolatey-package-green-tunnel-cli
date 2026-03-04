@@ -3,30 +3,26 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>green-tunnel-cli</id>
-    <version>1.8.3</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-green-tunnel-cli/tree/v1.8.3</packageSourceUrl>
+    <version>2.0.0</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-green-tunnel-cli/tree/v2.0.0</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>Green Tunnel (CLI)</title>
     <authors>Sadegh Hayeri</authors>
     <projectUrl>https://github.com/SadeghHayeri/GreenTunnel</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-green-tunnel-cli@45b1b102bf3a1836a63a043845506e4ca2c774c6/green-tunnel-cli.png</iconUrl>
-    <copyright>Copyright © 2022 Sadegh Hayeri</copyright>
-    <licenseUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v1.8.3/LICENSE</licenseUrl>
+    <copyright>Copyright © 2026 Sadegh Hayeri</copyright>
+    <licenseUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v2.0.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/SadeghHayeri/GreenTunnel/tree/v1.8.3</projectSourceUrl>
-    <docsUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v1.8.3/README.md</docsUrl>
+    <projectSourceUrl>https://github.com/SadeghHayeri/GreenTunnel/tree/v2.0.0</projectSourceUrl>
+    <docsUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v2.0.0/README.md</docsUrl>
     <mailingListUrl>https://github.com/SadeghHayeri/GreenTunnel/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/SadeghHayeri/GreenTunnel/issues</bugTrackerUrl>
     <tags>green-tunnel-cli green-tunnel green tunnel cli proxy dpi deep-packet-inspection http https sni server-name-indication dns isp filter filtering firewall bypass nodejs npm cross-platform foss</tags>
     <summary>An anti-censorship utility designed to bypass the DPI system that is put in place by various ISPs to block access to certain websites.</summary>
     <description><![CDATA[
 ---
-### [choco://green-tunnel-cli](choco://green-tunnel-cli)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://chocolatey.org/packages/choco-protocol-support)
 
----
-
-### Looking for the GUI version? Check out the [green-tunnel-gui](https://community.chocolatey.org/packages/green-tunnel-gui) package!
+### Looking for the GUI version? Check out the [green-tunnel-gui](https://community.chocolatey.org/packages/green-tunnel-gui) package
 
 ---
 
@@ -62,7 +58,7 @@ Examples:
 
 ## Package Notes
 
-While Green Tunnel is theoretically embeddable from a licensing perspective, it is deliberately sourced from the npm Registry to ensure dependencies are correctly managed and comply with Community Repository policies that prevent repackaging of relevant modules. If you need to [internalize this package](https://docs.chocolatey.org/en-us/guides/create/recompile-packages), follow [this guide](http://www.leanpro.cn/docs/leanrunner/en/shared/npm_offline) to prepare an archive for offline installation. 
+While Green Tunnel is theoretically embeddable from a licensing perspective, it is deliberately sourced from the npm Registry to ensure dependencies are correctly managed and comply with Community Repository policies that prevent repackaging of relevant modules. If you need to [internalize this package](https://docs.chocolatey.org/en-us/guides/create/recompile-packages), follow [this guide](http://www.leanpro.cn/docs/leanrunner/en/shared/npm_offline) to prepare an archive for offline installation.
 
 ---
 
