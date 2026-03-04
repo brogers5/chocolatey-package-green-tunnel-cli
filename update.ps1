@@ -3,19 +3,15 @@ Import-Module au
 $softwareRepo = 'SadeghHayeri/GreenTunnel'
 
 function global:au_GetLatest {
-    $packagePageUri = 'https://www.npmjs.com/package/green-tunnel'
+    $packagePageUri = 'https://registry.npmjs.org/green-tunnel'
     $userAgent = 'Update checker of Chocolatey Community Package ''green-tunnel-cli'''
-    $packagePage = Invoke-WebRequest -Uri $packagePageUri -UserAgent $userAgent -UseBasicParsing
+    $packageInfo = Invoke-RestMethod -Uri $packagePageUri -UserAgent $userAgent -UseBasicParsing
 
-    if ($packagePage.Content -notmatch '\>\s*([\d]+\.[\d\.]+)\s*\<\/p\>') {
-        throw 'Version number not found!'
-    }
-
-    $version = $Matches[1]
-    $script:softwareTag = "v$version"
+    $version = $packageInfo.'dist-tags'.latest
 
     return @{
-        Version = $version
+        SoftwareVersion = $version
+        Version         = $version  #This may change if building a package fix version
     }
 }
 
@@ -27,12 +23,12 @@ function global:au_SearchReplace {
     @{
         "$($Latest.PackageName).nuspec" = @{
             '<packageSourceUrl>[^<]*</packageSourceUrl>' = "<packageSourceUrl>https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)</packageSourceUrl>"
-            '<licenseUrl>[^<]*</licenseUrl>'             = "<licenseUrl>https://github.com/$($softwareRepo)/blob/$($softwareTag)/LICENSE</licenseUrl>"
-            '<projectSourceUrl>[^<]*</projectSourceUrl>' = "<projectSourceUrl>https://github.com/$($softwareRepo)/tree/$($softwareTag)</projectSourceUrl>"
+            '<licenseUrl>[^<]*</licenseUrl>'             = "<licenseUrl>https://github.com/$($softwareRepo)/blob/v$($Latest.SoftwareVersion)/LICENSE</licenseUrl>"
+            '<projectSourceUrl>[^<]*</projectSourceUrl>' = "<projectSourceUrl>https://github.com/$($softwareRepo)/tree/v$($Latest.SoftwareVersion)</projectSourceUrl>"
             '<copyright>[^<]*</copyright>'               = "<copyright>Copyright © $(Get-Date -Format yyyy) Sadegh Hayeri</copyright>"
         }
         'tools\chocolateyInstall.ps1'   = @{
-            "(^[$]?\s*npmPackageVersion\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
+            "(^[$]?\s*npmPackageVersion\s*=\s*)('.*')" = "`$1'$($Latest.SoftwareVersion)'"
         }
     }
 }
