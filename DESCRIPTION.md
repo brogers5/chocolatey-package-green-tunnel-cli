@@ -16,18 +16,19 @@ Usage: green-tunnel [options]
 Usage: gt [options]
 
 Options:
-  --help, -h      Show help                                            [boolean]
-  --version, -V   Show version number                                  [boolean]
-  --ip            ip address to bind proxy server[string] [default: "127.0.0.1"]
-  --port          port address to bind proxy server     [number] [default: 8000]
-  --https-only    Block insecure HTTP requests        [boolean] [default: false]
-  --dns-type[string] [choices: "https", "tls", "unencrypted"] [default: "https"]
-  --dns-server        [string] [default: "https://cloudflare-dns.com/dns-query"]
-  --dns-ip                                       [string] [default: "127.0.0.1"]
-  --dns-port                                              [number] [default: 53]
-  --silent, -s    run in silent mode                  [boolean] [default: false]
-  --verbose, -v   debug mode                              [string] [default: ""]
-  --system-proxy  automatic set system-proxy           [boolean] [default: true]
+  --ip                   IP address to bind proxy server     [string]  [default: "127.0.0.1"]
+  --port                 Port to bind proxy server           [number]  [default: 8000]
+  --https-only           Block insecure HTTP requests        [boolean] [default: false]
+  --dns-type             DNS resolver type                   [string]  [choices: "https", "tls", "unencrypted"] [default: "https"]
+  --dns-server           DNS server URL                      [string]  [default: "https://cloudflare-dns.com/dns-query"]
+  --dns-ip               IP for unencrypted DNS              [string]  [default: "127.0.0.1"]
+  --dns-port             Port for unencrypted DNS            [number]  [default: 53]
+  --tls-record-frag...   Enable TLS record fragmentation     [boolean] [default: false]
+  --silent, -s           Run in silent mode                  [boolean] [default: false]
+  --verbose, -v          Debug mode (e.g. 'green-tunnel:*')  [string]
+  --system-proxy         Auto-set system proxy               [boolean] [default: true]
+  --help, -h             Show help
+  --version, -V          Show version number
 
 Examples:
   gt
