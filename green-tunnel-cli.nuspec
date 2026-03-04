@@ -3,18 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>green-tunnel-cli</id>
-    <version>2.0.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-green-tunnel-cli/tree/v2.0.0</packageSourceUrl>
+    <version>2.0.1</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-green-tunnel-cli/tree/v2.0.1</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>Green Tunnel (CLI)</title>
     <authors>Sadegh Hayeri</authors>
     <projectUrl>https://github.com/SadeghHayeri/GreenTunnel</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-green-tunnel-cli@45b1b102bf3a1836a63a043845506e4ca2c774c6/green-tunnel-cli.png</iconUrl>
     <copyright>Copyright © 2026 Sadegh Hayeri</copyright>
-    <licenseUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v2.0.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v2.0.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/SadeghHayeri/GreenTunnel/tree/v2.0.0</projectSourceUrl>
-    <docsUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v2.0.0/README.md</docsUrl>
+    <projectSourceUrl>https://github.com/SadeghHayeri/GreenTunnel/tree/v2.0.1</projectSourceUrl>
+    <docsUrl>https://github.com/SadeghHayeri/GreenTunnel/blob/v2.0.1/README.md</docsUrl>
     <mailingListUrl>https://github.com/SadeghHayeri/GreenTunnel/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/SadeghHayeri/GreenTunnel/issues</bugTrackerUrl>
     <tags>green-tunnel-cli green-tunnel green tunnel cli proxy dpi deep-packet-inspection http https sni server-name-indication dns isp filter filtering firewall bypass nodejs npm cross-platform foss</tags>
@@ -37,18 +37,19 @@ Usage: green-tunnel [options]
 Usage: gt [options]
 
 Options:
-  --help, -h      Show help                                            [boolean]
-  --version, -V   Show version number                                  [boolean]
-  --ip            ip address to bind proxy server[string] [default: "127.0.0.1"]
-  --port          port address to bind proxy server     [number] [default: 8000]
-  --https-only    Block insecure HTTP requests        [boolean] [default: false]
-  --dns-type[string] [choices: "https", "tls", "unencrypted"] [default: "https"]
-  --dns-server        [string] [default: "https://cloudflare-dns.com/dns-query"]
-  --dns-ip                                       [string] [default: "127.0.0.1"]
-  --dns-port                                              [number] [default: 53]
-  --silent, -s    run in silent mode                  [boolean] [default: false]
-  --verbose, -v   debug mode                              [string] [default: ""]
-  --system-proxy  automatic set system-proxy           [boolean] [default: true]
+  --ip                   IP address to bind proxy server     [string]  [default: "127.0.0.1"]
+  --port                 Port to bind proxy server           [number]  [default: 8000]
+  --https-only           Block insecure HTTP requests        [boolean] [default: false]
+  --dns-type             DNS resolver type                   [string]  [choices: "https", "tls", "unencrypted"] [default: "https"]
+  --dns-server           DNS server URL                      [string]  [default: "https://cloudflare-dns.com/dns-query"]
+  --dns-ip               IP for unencrypted DNS              [string]  [default: "127.0.0.1"]
+  --dns-port             Port for unencrypted DNS            [number]  [default: 53]
+  --tls-record-frag...   Enable TLS record fragmentation     [boolean] [default: false]
+  --silent, -s           Run in silent mode                  [boolean] [default: false]
+  --verbose, -v          Debug mode (e.g. 'green-tunnel:*')  [string]
+  --system-proxy         Auto-set system proxy               [boolean] [default: true]
+  --help, -h             Show help
+  --version, -V          Show version number
 
 Examples:
   gt
