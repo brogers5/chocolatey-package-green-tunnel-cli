@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $npmPackageName = 'green-tunnel'
-$npmPackageVersion = '2.0.1'
+$npmPackageVersion = '2.0.2'
 
 if (!(Get-Command -Name 'npm' -CommandType Application -ErrorAction SilentlyContinue)) {
   Write-Output 'Cannot find npm - updating environment in case of a recent Node.js install...'
