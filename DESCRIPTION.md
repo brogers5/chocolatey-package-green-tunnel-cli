@@ -12,28 +12,29 @@ Green Tunnel is an anti-censorship utility, implemented as a local proxy server,
 ### Usage Statement
 
 ```shell
-Usage: green-tunnel [options]
 Usage: gt [options]
-
-Options:
-  --ip                   IP address to bind proxy server     [string]  [default: "127.0.0.1"]
-  --port                 Port to bind proxy server           [number]  [default: 8000]
-  --https-only           Block insecure HTTP requests        [boolean] [default: false]
-  --dns-type             DNS resolver type                   [string]  [choices: "https", "tls", "unencrypted"] [default: "https"]
-  --dns-server           DNS server URL                      [string]  [default: "https://cloudflare-dns.com/dns-query"]
-  --dns-ip               IP for unencrypted DNS              [string]  [default: "127.0.0.1"]
-  --dns-port             Port for unencrypted DNS            [number]  [default: 53]
-  --tls-record-frag...   Enable TLS record fragmentation     [boolean] [default: false]
-  --silent, -s           Run in silent mode                  [boolean] [default: false]
-  --verbose, -v          Debug mode (e.g. 'green-tunnel:*')  [string]
-  --system-proxy         Auto-set system proxy               [boolean] [default: true]
-  --help, -h             Show help
-  --version, -V          Show version number
-
-Examples:
-  gt
-  gt --ip 127.0.0.1 --port 8000
-  gt --dns-server https://doh.securedns.eu/dns-query
+Server
+  --host <ip>              Address to bind          (default: 127.0.0.1)
+  -p, --port <n>           Port to bind, 0 = random (default: 8000)
+  --https-only             Reject plain HTTP requests
+Fragmentation
+  --no-fragment            Forward the ClientHello untouched
+  --fragment-size <n>      Bytes per piece          (default: 40)
+  --tls-records            Re-frame pieces as valid TLS records
+  --fragment-delay <ms>    Pause between pieces     (default: 0)
+DNS
+  --dns <mode>             doh | dot | plain        (default: doh)
+  --doh-url <url>          DoH endpoint             (default: Cloudflare)
+  --dot-host <host>        DoT server               (default: 1.1.1.1)
+  --dot-port <n>           DoT port                 (default: 853)
+  --dns-server <ip>        Plain resolver, repeatable
+  --family <pref>          ipv4 | ipv6 | ipv4-first | ipv6-first
+Other
+  --no-system-proxy        Do not touch the OS proxy settings
+  --log-level <level>      silent | error | warn | info | debug | trace
+  -q, --quiet              No banner, no logs
+  -h, --help               Show this help
+  -V, --version            Show the version
 ```
 
 ## Package Notes
